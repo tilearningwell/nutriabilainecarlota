@@ -1,0 +1,119 @@
+/* Estilos personalizados */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.hero-image {
+    animation: float 6s ease-in-out infinite;
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #00897B, #FF7F50);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Animações de fade-in */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsividade do menu mobile */
+.mobile-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+/* Hover effects */
+.service-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card img {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00897B;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #FF7F50;
+}
+
+/* Fonte personalizada para o título Especialidades */
+@font-face {
+    font-family: 'Rounded';
+    src: url('assets/fonts/rounded.woff2') format('woff2');
+}
+
+.especialidades-title {
+    font-family: 'Rounded', sans-serif;
+}
+
+/* Estilos para os links "Saiba Mais" */
+.service-card a[href^="#"] {
+    position: relative;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.service-card a[href^="#"]:hover {
+    background-color: rgba(74, 144, 226, 0.1);
+}
+
+/* Ajuste para o header fixo */
+header {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Estilos para as seções de detalhes */
+#detalhes-servicos section {
+    scroll-margin-top: 100px;
+} 

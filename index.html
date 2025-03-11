@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abilaine Carlota - Nutricionista Materno-Infantil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos CSS Inline -->
+    <style>
+        /* Animações e efeitos */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .hero-image {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #00897B, #FF7F50);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Animações de fade-in */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hover effects */
+        .service-card {
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #4A90E2;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #F39C12;
+        }
+
+        /* Responsividade do menu mobile */
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+    </style>
+
+    <!-- Configuração do Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#00897B',
+                        'secondary': '#FF7F50',
+                        'light-pink': '#FFF0F0',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins bg-light-pink">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="assets/images/logo.png" alt="Logo Abilaine Carlota" class="h-12">
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-gray-700 hover:text-primary">INÍCIO</a>
+                <a href="#sobre" class="text-gray-700 hover:text-primary">SOBRE</a>
+                <a href="#servicos" class="text-gray-700 hover:text-primary">SERVIÇOS</a>
+                <a href="#avaliacoes" class="text-gray-700 hover:text-primary">AVALIAÇÕES</a>
+                <a href="#duvidas" class="text-gray-700 hover:text-primary">DÚVIDAS</a>
+                <a href="#contato" class="text-gray-700 hover:text-primary">CONTATO</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="tel:(11) 9 3305 8210" class="text-primary hover:text-secondary">(11) 9 3305 8210</a>
+                <a href="mailto:dra.abilainecarlota@gmail.com" class="text-primary hover:text-secondary hidden md:block">dra.abilainecarlota@gmail.com</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-24 pb-12 md:pt-32 md:pb-24 bg-light-pink">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0 animate-on-scroll">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="text-primary">Nutrição para</span><br>
+                    <span class="gradient-text">uma Vida</span><br>
+                    <span class="text-primary">Melhor!</span>
+                </h1>
+                <p class="text-gray-600 mb-8 text-lg">
+                    Especialista em nutrição materno-infantil, ajudando famílias a desenvolverem uma relação saudável com a alimentação.
+                </p>
+                <a href="#contato" class="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-secondary transition duration-300">
+                    AGENDE JÁ UMA CONSULTA!
+                </a>
+            </div>
+            <div class="md:w-1/2 animate-on-scroll">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-primary rounded-full opacity-10"></div>
+                    <img src="assets/images/nutri-hero.jpg" alt="Nutricionista Abilaine Carlota" class="hero-image relative rounded-full w-full max-w-lg mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="animate-on-scroll">
+                    <img src="assets/images/biap.jpg" alt="Dra. Abilaine Carlota" class="rounded-2xl shadow-lg w-full h-auto">
+                    <div class="grid grid-cols-3 gap-4 mt-4">
+                        <img src="assets/images/adpo.jpg" alt="Momentos com pacientes" class="rounded-lg shadow-md">
+                        <img src="assets/images/livance.png" alt="Consultório" class="rounded-lg shadow-md">
+                        <img src="assets/images/kids.png" alt="Atendimento infantil" class="rounded-lg shadow-md">
+                    </div>
+                </div>
+                
+                <div class="flex flex-col justify-center animate-on-scroll">
+                    <h2 class="text-4xl font-bold mb-6" style="color: #FF69B4;">Sobre Mim</h2>
+                    
+                    <div class="space-y-6 text-gray-700">
+                        <p class="leading-relaxed">
+                            Nutricionista apaixonada por ajudar crianças a desenvolverem hábitos alimentares saudáveis e felizes. Com pós-graduação em Nutrição Infantil e Nutrição Escolar, dedico-me a fornecer orientações nutricionais personalizadas para crianças em diferentes estágios de crescimento e desenvolvimento.
+                        </p>
+                        
+                        <p class="leading-relaxed">
+                            Minha jornada profissional é inspirada pela minha própria experiência como mãe de um menino encantador de 7 anos. Ser mãe me proporcionou uma compreensão mais profunda das complexidades e desafios que os pais enfrentam ao nutrir seus filhos. Essa experiência pessoal combinada com minha formação acadêmica me permite oferecer um suporte abrangente e empático aos pais e cuidadores.
+                        </p>
+                        
+                        <p class="leading-relaxed font-medium text-primary italic">
+                            Seja bem-vindo(a) à nossa jornada em direção a uma vida mais saudável e feliz para as nossas crianças.
+                        </p>
+                    </div>
+
+                    <!-- Qualificações -->
+                    <div class="mt-8 bg-pink-50 p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-4" style="color: #FF69B4;">Qualificações</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <span class="mr-2">📚</span>
+                                Pós-graduação em Nutrição Infantil
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-2">📚</span>
+                                Pós-graduação em Nutrição Escolar
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-2">💕</span>
+                                Especialista em Nutrição Materno-Infantil
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="mt-8">
+                        <a href="#contato" class="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-full hover:bg-secondary transition duration-300">
+                            <span class="mr-2">📅</span>
+                            Agende sua Consulta
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="py-16 bg-white">
+		<div class="container mx-auto px-4">
+			<h2 class="text-4xl md:text-4xl font-bold text-primary text-center mb-12 animate-on-scroll">Nossos Serviços</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<!-- Serviço 0 -->
+				<div class="service-card bg-light-pink rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300 animate-on-scroll">
+					<div class="text-2xl md:text-2xl font-bold text-center text-center mb-12 animate-on-scroll">Nossas Especialidades:</div>
+					<h3 class="text-2x2 md:text-2x2 font-semibold text-primary mb-12 animate-on-scroll"></h3>	
+				</div>
+				<!-- Serviço 1 -->
+				<div class="service-card bg-light-pink rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300 animate-on-scroll">
+					<div class="text-6xl md:text-6xl font-bold text-center text-center mb-12 animate-on-scroll">🌺</div>
+					<h3 class="text-3xl md:text-2xl font-bold text-center mb-12 animate-on-scroll">Nutrição na Pré-Concepção</h3>
+					<a href="#pre-concepcao-detalhes" class="text-primary hover:text-secondary text-center block mt-4">Saiba Mais +</a>
+				</div>
+				<!-- Serviço 2 -->
+				<div class="service-card bg-light-pink rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300 animate-on-scroll">
+					<div class="text-6xl md:text-6xl font-bold text-center text-center mb-12 animate-on-scroll">🤰</div>
+					<h3 class="text-3xl md:text-2xl font-bold text-center mb-12 animate-on-scroll">Nutrição na Gravidez</h3>
+					<a href="#gravidez-detalhes" class="text-primary hover:text-secondary text-center block mt-4">Saiba Mais +</a>
+				</div>
+				<!-- Serviço 3 -->
+				<div class="service-card bg-light-pink rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300 animate-on-scroll">
+					<div class="text-6xl md:text-6xl font-bold text-center text-center mb-12 animate-on-scroll">🤱</div>
+					<h3 class="text-3xl md:text-2xl font-bold text-center mb-12 animate-on-scroll">Nutrição Pós-Parto e Amamentação</h3>
+					<a href="#pos-parto-detalhes" class="text-primary hover:text-secondary text-center block mt-4">Saiba Mais +</a>
+				</div>
+				<!-- Serviço 4 -->
+				<div class="service-card bg-light-pink rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300 animate-on-scroll">
+					<div class="text-6xl md:text-6xl font-bold text-center text-center mb-12 animate-on-scroll">👶</div>
+					<h3 class="text-3xl md:text-2xl font-bold text-center mb-12 animate-on-scroll">Nutrição na Infância a Adolescência</h3>
+					<a href="#infancia-detalhes" class="text-primary hover:text-secondary text-center block mt-4">Saiba Mais +</a>
+				</div>
+				<!-- Serviço 6 -->
+				<div class="service-card bg-light-pink rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300 animate-on-scroll">
+					<div class="text-6xl md:text-6xl font-bold text-center text-center mb-12 animate-on-scroll">🥣</div>
+					<h3 class="text-3xl md:text-2xl font-bold text-center mb-12 animate-on-scroll">Introdução da alimentação complementar e Métodos de introdução alimentar</h3>
+					<a href="#introducao-detalhes" class="text-primary hover:text-secondary text-center block mt-4">Saiba Mais +</a>
+				</div>
+				<!-- Serviço 7 -->
+				<div class="service-card bg-light-pink rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300 animate-on-scroll">
+					<div class="text-6xl md:text-6xl font-bold text-center text-center mb-12 animate-on-scroll">🍽️</div>
+					<h3 class="text-3xl md:text-2xl font-bold text-center mb-12 animate-on-scroll">Dificuldades Alimentares e Seletividade Alimentar</h3>
+					<a href="#dificuldades-detalhes" class="text-primary hover:text-secondary text-center block mt-4">Saiba Mais +</a>
+				</div>
+				<!-- Serviço 4 -->
+				<div class="service-card bg-light-pink rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300 animate-on-scroll">
+					<div class="text-6xl md:text-6xl font-bold text-center text-center mb-12 animate-on-scroll">⚠️</div>
+					<h3 class="text-3xl md:text-2xl font-bold text-center mb-12 animate-on-scroll">Intolerâncias e Alergias Alimentares</h3>
+					<a href="#alergias-detalhes" class="text-primary hover:text-secondary text-center block mt-4">Saiba Mais +</a>
+				</div>
+				<!-- Serviço 8 -->
+				<div class="service-card bg-light-pink rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300 animate-on-scroll">
+					<div class="text-6xl md:text-6xl font-bold text-center text-center mb-12 animate-on-scroll">📚</div>
+					<h3 class="text-3xl md:text-2xl font-bold text-center mb-12 animate-on-scroll">Educação Nutricional em todas as fases de Vida</h3>
+					<a href="#educacao-detalhes" class="text-primary hover:text-secondary text-center block mt-4">Saiba Mais +</a>
+				</div>
+			</div>
+		</div>
+	</section>
+    <!-- Detalhes dos Serviços -->
+    <!-- ... (Cole todo o conteúdo HTML existente aqui) ... -->
+	<section id="detalhes-servicos" class="py-16 bg-white">
+		<div class="container mx-auto px-4">
+			<!-- Detalhes Pré-Concepção -->
+			<div id="pre-concepcao-detalhes" class="mb-16">
+				<h3 class="text-3xl font-bold text-primary mb-8">Nutrição na Pré-Concepção</h3>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div class="bg-light-pink p-6 rounded-lg">
+						<h4 class="text-xl font-semibold mb-4">Avaliação Nutricional</h4>
+						<ul class="list-disc list-inside space-y-2">
+							<li>Avaliação do estado nutricional</li>
+							<li>Identificação de deficiências nutricionais</li>
+							<li>Planejamento alimentar personalizado</li>
+						</ul>
+					</div>
+					<div class="bg-light-pink p-6 rounded-lg">
+						<h4 class="text-xl font-semibold mb-4">Preparação para Gestação</h4>
+						<ul class="list-disc list-inside space-y-2">
+							<li>Otimização do peso</li>
+							<li>Suplementação quando necessária</li>
+							<li>Orientações nutricionais específicas</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Detalhes Gravidez -->
+			<div id="gravidez-detalhes" class="mb-16">
+				<h3 class="text-3xl font-bold text-primary mb-8">Nutrição na Gravidez</h3>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div class="bg-light-pink p-6 rounded-lg">
+						<h4 class="text-xl font-semibold mb-4">Avaliação Nutricional</h4>
+						<ul class="list-disc list-inside space-y-2">
+							<li>Avaliação nutricional da gestante - aspectos básicos</li>
+							<li>Avaliação Detalhada do Estado Nutricional da Gestante</li>
+							<li>Monitoramento do Ganho de Peso</li>
+							<li>Necessidades Nutricionais da Gestante</li>
+							<li>Práticas Alimentares da Gestante e da Nutriz</li>
+							<li>Identificar os distúrbios nutricionais</li>
+							<li>Auxiliar na tomada de decisão de outros profissionais da Saúde</li>
+						</ul>
+					</div>
+					<div class="bg-light-pink p-6 rounded-lg">
+						<h4 class="text-xl font-semibold mb-4">Atendimento à Condições Específicas</h4>
+						<ul class="list-disc list-inside space-y-2">
+							<li>A gestante de alto risco</li>
+							<li>Diabetes Gestacional "Mellitus" e Doenças Hipertensivas da Gestação</li>
+							<li>Avaliação nutricional da gestante de risco – estratificação de risco gestacional</li>
+							<li>Terapia nutricional na hiperêmese gravídica</li>
+							<li>Técnica comportamental para controle do ganho de peso</li>
+						</ul>
+					</div>
+				</div>
+				<div class="mt-8">
+					<div class="bg-light-pink p-6 rounded-lg">
+						<h4 class="text-xl font-semibold mb-4">Suplementação e Planejamento Alimentar</h4>
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<div>
+								<h5 class="font-semibold text-primary mb-3">Suplementação</h5>
+								<ul class="list-disc list-inside space-y-2">
+									<li>Recomendação de Suplementos Quando Necessário</li>
+									<li>Suplementação da Gestante de Alto Risco</li>
+									<li>Elaboração de dietas balanceadas para garantir a ingestão adequada de nutrientes e macro nutrientes essenciais.</li>
+								</ul>
+							</div>
+							<div>
+								<h5 class="font-semibold text-primary mb-3">Planejamento Alimentar</h5>
+								<ul class="list-disc list-inside space-y-2">
+									<li>Elaboração de dietas balanceadas</li>
+									<li>Garantia de ingestão adequada de nutrientes</li>
+									<li>Macronutrientes essenciais</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Detalhes Pós-Parto -->
+			<div id="pos-parto-detalhes" class="mb-16">
+				<h3 class="text-3xl font-bold text-primary mb-8">Pós-Parto e Amamentação</h3>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div class="bg-light-pink p-6 rounded-lg">
+						<h4 class="text-xl font-semibold mb-4">Pós-Parto</h4>
+						<ul class="list-disc list-inside space-y-2">
+							<li>Necessidades nutricionais</li>
+							<li>Planejamento para gerenciar o peso</li>
+							<li>Práticas alimentares saudáveis</li>
+						</ul>
+					</div>
+					<div class="bg-light-pink p-6 rounded-lg">
+						<h4 class="text-xl font-semibold mb-4">Amamentação</h4>
+						<ul class="list-disc list-inside space-y-2">
+							<li>Dez passos para o sucesso do aleitamento materno</li>
+							<li>Como evitar complicações na amamentação</li>
+							<li>Problemas relacionados à amamentação</li>
+							<li>Particularidades e contraindicações</li>
+							<li>Manejo clínico</li>
+							<li>Processamento do leite humano e doação</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Detalhes Infância -->
+			<div id="infancia-detalhes" class="mb-16">
+				<h3 class="text-3xl font-bold text-primary mb-8">Nutrição na Infância e Adolescência</h3>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div class="bg-light-pink p-6 rounded-lg">
+						<h4 class="text-xl font-semibold mb-4">Recém-Nascido Pré-termo</h4>
+						<ul class="list-disc list-inside space-y-2">
+							<li>A importância da nutrição nos primeiros mil dias de vida</li>
+							<li>Recomendações nutricionais da alimentação na primeira infância</li>
+							<li>Recomendação de micronutrientes e suplementação profilática</li>
+							<li>Aspectos gerais e fisiológicos do recém-nascido e na infância</li>
+						</ul>
+					</div>
+					<div class="bg-light-pink p-6 rounded-lg">
+						<h4 class="text-xl font-semibold mb-4">Saúde e Nutrição na Infância: imunidade e condições particulares</h4>
+						<ul class="list-disc list-inside space-y-2">
+							<li>Nutrição e imunidade na primeira infância</li>
+							<li>Alimentação e nutrição na primeira infância</li>
+						</ul>
+					</div>
+					<div class="bg-light-pink p-6 rounded-lg">
+						<h4 class="text-xl font-semibold mb-4">Adolescência</h4>
+						<ul class="list-disc list-inside space-y-2">
+							<li>Particularidades nutricionais durante o desenvolvimento do adolescente </li>
+							<li>Qualidade da alimentação do adolescente</li>
+						</ul>
+					</div>
+					<div class="bg-light-pink p-6 rounded-lg">
+						<h4 class="text-xl font-semibold mb-4">Condições especiais</h4>
+						<ul class="list-disc list-inside space-y-2">
+							<li>Obesidade infantil e doenças crônicas na infância, aspectos nutricionais e tratamento dietoterápico</li>
+							<li> Nutrição vegetariana na infância e adolescência, aspectos nutricionais e dietoterapia</li>
+							<li>Alimentação complementar para crianças vegetarianas e veganas</li>
+							<li>Macronutrientes na dieta vegetariana na infância e adolescência</li>
+							<li>Os micronutrientes na alimentação vegetariana de crianças e adolescentes</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Detalhes Introdução Alimentar -->
+			<div id="introducao-detalhes" class="mb-16">
+				<h3 class="text-3xl font-bold text-primary mb-8">Introdução da Alimentação Complementar</h3>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div class="bg-light-pink p-6 rounded-lg">
+						<h4 class="text-xl font-semibold mb-4">Introdução Alimentar</h4>
+						<ul class="list-disc list-inside space-y-2">
+							<li>Quando iniciar, quanto oferecer e o que oferecer</li>
+							<li>A importância da adequada alimentação complementar</li>
+							<li>Restrições alimentares e considerações sobre os utensílios</li>
+						</ul>
+					</div>
+					<div class="bg-light-pink p-6 rounded-lg">
+						<h4 class="text-xl font-semibold mb-4">Métodos de Introdução Alimentar</h4>
+						<ul class="list-disc list-inside space-y-2">
+							<li>Método tradicional e BLW</li>
+							<li>Método participativo e Bliss</li>
+							<li>Qual melhor método?</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Detalhes Dificuldades Alimentares -->
+			<div id="dificuldades-detalhes" class="mb-16">
+				<h3 class="text-3xl font-bold text-primary mb-8">Dificuldades Alimentares e Seletividade Alimentar</h3>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div class="bg-light-pink p-6 rounded-lg">
+						<h4 class="text-xl font-semibold mb-4">Conceitos e Estratégias</h4>
+						<ul class="list-disc list-inside space-y-2">
+							<li>Diferenças entre seletividade e dificuldade alimentar</li>
+							<li>Descobrindo o que está por trás de uma criança que não come</li>
+							<li>Construindo paladar</li>
+							<li>Explorando os sentidos</li>
+							<li>Estratégias de apoio</li>
+						</ul>
+					</div>
+					<div class="bg-light-pink p-6 rounded-lg">
+						<h4 class="text-xl font-semibold mb-4">Fatores e Educação</h4>
+						<ul class="list-disc list-inside space-y-2">
+							<li>Fatores que modulam a dificuldade alimentar</li>
+							<li>Aprenda educar uma criança que não come</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Detalhes Alergias -->
+			<div id="alergias-detalhes" class="mb-16">
+				<h3 class="text-3xl font-bold text-primary mb-8">Intolerâncias e Alergias Alimentares</h3>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div class="bg-light-pink p-6 rounded-lg">
+						<h4 class="text-xl font-semibold mb-4">Conceitos e Diagnóstico</h4>
+						<ul class="list-disc list-inside space-y-2">
+							<li>Desvendando a diferença entre intolerâncias e alergias alimentares</li>
+							<li>Diagnóstico e tratamento por dieta</li>
+							<li>Defeitos enzimáticos nas Intolerâncias e Alergias Alimentares</li>
+						</ul>
+					</div>
+					<div class="bg-light-pink p-6 rounded-lg">
+						<h4 class="text-xl font-semibold mb-4">Tipos e Fases</h4>
+						<ul class="list-disc list-inside space-y-2">
+							<li>Intolerâncias e alergias alimentares frequentes</li>
+							<li>Intolerâncias e alergia alimentar nas diferentes fases da vida</li>
+							<li>Alergias alimentares na infância</li>
+							<li>Alergias alimentares em adolescentes e adultos</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Detalhes Educação Nutricional -->
+			<div id="educacao-detalhes" class="mb-16">
+				<h3 class="text-3xl font-bold text-primary mb-8">Educação Nutricional em Todas As Fases de Vida</h3>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div class="bg-light-pink p-6 rounded-lg">
+						<h4 class="text-xl font-semibold mb-4">Influência Familiar</h4>
+						<ul class="list-disc list-inside space-y-2">
+							<li>A importância da boa alimentação dos pais e A influência da família para a formação dos hábitos alimentares</li>
+						</ul>
+					</div>
+					<div class="bg-light-pink p-6 rounded-lg">
+						<h4 class="text-xl font-semibold mb-4">Problemas e Inadequações</h4>
+						<ul class="list-disc list-inside space-y-2">
+							<li>Problemas na alimentação e efeitos negativos do consumo de alimentos Ultra processados e processados</li>
+							<li>Inadequações de consumo e malefícios do consumo de alimentos processados e doenças associadas</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    <!-- Tipos de Atendimento Section -->
+    <section id="tipos-atendimento" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 animate-on-scroll" style="color: #00897B;">
+                Tipos de Atendimento
+            </h2>
+
+            <!-- Atendimento Presencial https://images.prismic.io/livance-domus/ZzIKJa8jQArT0r5r_bia.png?auto=format%2Ccompress&fit=max&w=640-->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                <div class="animate-on-scroll">
+                    <img src="https://s3-sa-east-1.amazonaws.com/doctoralia.com.br/doctor/4d7c20/4d7c204d19438691275b291f8785af9c_large.jpg" alt="Consultório Tatuapé" class="rounded-2xl shadow-lg w-full h-auto mb-6">
+                    <!-- Google Maps Embed -->
+                    <div class="w-full h-[300px] rounded-2xl overflow-hidden shadow-lg">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.1824580976844!2d-46.57661542375776!3d-23.53798447885707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5ec26c7576d3%3A0x3c1642d869854938!2sR.%20Vilela%2C%20665%20-%20Tatuap%C3%A9%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003314-000!5e0!3m2!1spt-BR!2sbr!4v1709858433416!5m2!1spt-BR!2sbr"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="rounded-2xl">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center animate-on-scroll">
+                    <h3 class="text-3xl font-bold mb-6" style="color: #00897B;">Atendimento Presencial</h3>
+                    <div class="bg-pink-50 p-6 rounded-xl mb-6">
+                        <h4 class="text-xl font-semibold mb-4 text-primary">Consultório Tatuapé</h4>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-center">
+                                <span class="mr-2">📍</span>
+                                Rua Vilela, 665 8º Andar, Tatuapé - São Paulo
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-2">📞</span>
+                                Telefone: 11 93305-8210
+                            </li>
+                        </ul>
+                    </div>
+                    <a 
+                        href="https://www.google.com/maps/dir//R.+Vilela,+665+-+Tatuap%C3%A9+S%C3%A3o+Paulo+-+SP+03314-000/@-23.5402828,-46.5658437,2621m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x94ce5eedbe9c712b:0x1935684694041251!2m2!1d-46.5658437!2d-23.5402828?entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" 
+                        target="_blank" 
+                        class="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-full hover:bg-secondary transition duration-300">
+                        <span class="mr-2">🗺️</span>
+                        Ver no Google Maps
+                    </a>
+                </div>
+            </div>
+
+            <!-- Atendimento Online -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="flex flex-col justify-center order-2 md:order-1 animate-on-scroll">
+                    <h3 class="text-3xl font-bold mb-6" style="color: #00897B;">Atendimento Online</h3>
+                    <div class="bg-pink-50 p-6 rounded-xl">
+                        <h4 class="text-xl font-semibold mb-4 text-primary">Consultas à Distância</h4>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-center">
+                                <span class="mr-2">💻</span>
+                                Atendimento via videoconferência
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-2">🌍</span>
+                                Acessível de qualquer lugar
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-2">📱</span>
+                                Acompanhamento pelo WhatsApp
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5511933058210" class="inline-flex items-center justify-center bg-green-500 text-white px-6 py-3 rounded-full mt-6 hover:bg-green-600 transition duration-300">
+                        <span class="mr-2">💬</span>
+                        Agende sua Consulta Online
+                    </a>
+                </div>
+                <div class="order-1 md:order-2 animate-on-scroll">
+                    <img src="https://telemedicinamorsch.com.br/wp-content/uploads/2023/09/nutricionista-perto-de-mim-telemedicina-morsch.jpg" alt="Atendimento Online" class="rounded-2xl shadow-lg w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="py-16 bg-light-marine">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 animate-on-scroll" style="color: #00897B;">
+                Entre em Contato
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5511933058210" class="fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300 z-50 flex items-center">
+        <span class="text-2xl">💬</span>
+        <span class="ml-2 hidden md:inline">Como posso te ajudar?</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="animate-on-scroll">
+                    <h4 class="text-xl font-semibold mb-4">Contato</h4>
+                    <p class="mb-2">📞 (11) 9 3305 8210</p>
+                    <p class="mb-2">✉️ dra.abilainecarlota@gmail.com</p>
+                </div>
+                <div class="animate-on-scroll">
+                    <h4 class="text-xl font-semibold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/nutriabilainecarlota" class="hover:text-secondary">Instagram</a>
+                        <a href="https://youtube.com/@nutricionistaabilainecarlota" class="hover:text-secondary">Youtube</a>
+                        <a href="https://wa.me/5511933058210" class="hover:text-secondary">WhatsApp</a>
+                    </div>
+                </div>
+                <div class="animate-on-scroll">
+                    <h4 class="text-xl font-semibold mb-4">Horário de Atendimento</h4>
+                    <p class="mb-2">Segunda a Sexta: 8h às 18h</p>
+                    <p>Sábado: 8h às 12h</p>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <p>&copy; 2024 Abilaine Carlota - Nutricionista Materno-Infantil. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Inline -->
+    <script>
+        // Smooth scroll para links de navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Adicionar classe active ao menu quando scrollar
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('shadow-lg', window.scrollY > 0);
+        });
+
+        // Animação de fade-in para elementos quando aparecem na tela
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach((element) => {
+            observer.observe(element);
+        });
+
+        // Menu mobile toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+            });
+        }
+
+        // Fechar menu mobile ao clicar em um link
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Fechar menu mobile ao clicar fora
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html> 
