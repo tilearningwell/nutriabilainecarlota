@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Abilaine Carlota - Nutricionista Materno-Infantil</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/styles.css">
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						'primary': '#00897B',
+						'secondary': '#FF7F50',
+						'light-pink': '#FFF0F0',
+					},
+					fontFamily: {
+						'poppins': ['Poppins', 'sans-serif'],
+					},
+				}
+			}
+		}
+	</script>
+</head>
+<body class="font-poppins bg-light-pink">
+	<!-- Header/Navbar -->
+	<header class="bg-white shadow-md fixed w-full z-50">
+		<nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+			<div class="flex items-center">
+				<img src="assets/images/logo.png" alt="Logo Abilaine Carlota" class="h-12">
+			</div>
+			<div class="hidden md:flex space-x-8">
+				<a href="#inicio" class="text-gray-700 hover:text-primary">INÍCIO</a>
+				<a href="#sobre" class="text-gray-700 hover:text-primary">SOBRE</a>
+				<a href="#servicos" class="text-gray-700 hover:text-primary">SERVIÇOS</a>
+				<a href="#avaliacoes" class="text-gray-700 hover:text-primary">AVALIAÇÕES</a>
+				<a href="#duvidas" class="text-gray-700 hover:text-primary">DÚVIDAS</a>
+				<a href="#contato" class="text-gray-700 hover:text-primary">CONTATO</a>
+			</div>
+			<div class="flex items-center space-x-4">
+				<a href="tel:(11) 9 3305 8210" class="text-primary hover:text-secondary">(11) 9 3305 8210</a>
+				<a href="mailto:dra.abilainecarlota@gmail.com" class="text-primary hover:text-secondary hidden md:block">dra.abilainecarlota@gmail.com</a>
+			</div>
+		</nav>
+	</header>
+
+	<!-- Hero Section -->
+	<section id="inicio" class="pt-24 pb-12 md:pt-32 md:pb-24 bg-light-pink">
+		<div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+			<div class="md:w-1/2 mb-8 md:mb-0 animate-on-scroll">
+				<h1 class="text-4xl md:text-6xl font-bold mb-6">
+					<span class="text-primary">Nutrir vidas é</span><br>
+					<span class="gradient-text">alimentar</span><br>
+					<span class="text-primary">sonhos!</span>
+				</h1>
+				<p class="text-gray-600 mb-8 text-lg">
+					Especialista em nutrição materno-infantil, ajudando famílias a desenvolverem uma relação saudável com a alimentação.
+				</p>
+				<a href="#contato" class="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-secondary transition duration-300">
+					AGENDE JÁ UMA CONSULTA!
+				</a>
+			</div>
+			<div class="md:w-1/2 animate-on-scroll">
+				<div class="relative">
+					<div class="absolute -inset-4 bg-primary rounded-full opacity-10"></div>
+					<img src="assets/images/nutri-hero.jpg" alt="Nutricionista Abilaine Carlota" class="hero-image relative rounded-full w-full max-w-lg mx-auto">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Serviços Section -->
+	<section id="servicos" class="py-16 bg-white">
+		<div class="container mx-auto px-4">
+			<h2 class="text-4xl md:text-5xl font-bold text-center mb-16 animate-on-scroll" style="color: #FF69B4;">
+				Especialidades
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<!-- Gestantes -->
+				<div class="service-card bg-pink-50 rounded-3xl p-8 shadow-lg hover:shadow-xl transition duration-300 animate-on-scroll text-center">
+					<div class="flex justify-center mb-6">
+						<img src="assets/images/icons/gestante-icon.png" alt="Gestantes" class="w-24 h-24">
+					</div>
+					<h3 class="text-2xl font-semibold mb-4" style="color: #FF69B4;">Gestantes</h3>
+					<p class="text-gray-600 mb-6">
+						Diabetes Gestacional, Gestação Gemelar, Pressão Alta, Ganho de Peso Saudável, Anemia, Gestante Bariátrica
+					</p>
+					<a href="#" class="inline-block text-pink-500 hover:text-pink-600 font-medium">
+						Saiba Mais +
+					</a>
+				</div>
+
+				<!-- Lactantes -->
+				<div class="service-card bg-pink-50 rounded-3xl p-8 shadow-lg hover:shadow-xl transition duration-300 animate-on-scroll text-center">
+					<div class="flex justify-center mb-6">
+						<img src="assets/images/icons/lactante-icon.png" alt="Lactantes" class="w-24 h-24">
+					</div>
+					<h3 class="text-2xl font-semibold mb-4" style="color: #FF69B4;">Lactantes</h3>
+					<p class="text-gray-600 mb-6">
+						Alimentação e Perda de Peso Saudável no Pós-parto, Dieta para Lactante, Alergias, Desmame Gentil
+					</p>
+					<a href="#" class="inline-block text-pink-500 hover:text-pink-600 font-medium">
+						Saiba Mais +
+					</a>
+				</div>
+
+				<!-- Nutrição Infantil -->
+				<div class="service-card bg-pink-50 rounded-3xl p-8 shadow-lg hover:shadow-xl transition duration-300 animate-on-scroll text-center">
+					<div class="flex justify-center mb-6">
+						<img src="assets/images/icons/bebe-icon.png" alt="Nutrição Infantil" class="w-24 h-24">
+					</div>
+					<h3 class="text-2xl font-semibold mb-4" style="color: #FF69B4;">Nutrição Infantil</h3>
+					<p class="text-gray-600 mb-6">
+						Introdução Alimentar, Alergias e Intolerâncias, Seletividade Alimentar, Desenvolvimento Saudável
+					</p>
+					<a href="#" class="inline-block text-pink-500 hover:text-pink-600 font-medium">
+						Saiba Mais +
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- WhatsApp Button -->
+	<a href="https://wa.me/5511933058210" class="fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300 z-50 flex items-center">
+		<span class="text-2xl">💬</span>
+		<span class="ml-2 hidden md:inline">Como posso te ajudar?</span>
+	</a>
+
+	<!-- Footer -->
+	<footer class="bg-primary text-white py-8">
+		<div class="container mx-auto px-4">
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="animate-on-scroll">
+					<h4 class="text-xl font-semibold mb-4">Contato</h4>
+					<p class="mb-2">📞 (11) 9 3305 8210</p>
+					<p class="mb-2">✉️ dra.abilainecarlota@gmail.com</p>
+				</div>
+				<div class="animate-on-scroll">
+					<h4 class="text-xl font-semibold mb-4">Redes Sociais</h4>
+					<div class="flex space-x-4">
+						<a href="#" class="hover:text-secondary">Instagram</a>
+						<a href="#" class="hover:text-secondary">LinkedIn</a>
+						<a href="#" class="hover:text-secondary">WhatsApp</a>
+					</div>
+				</div>
+				<div class="animate-on-scroll">
+					<h4 class="text-xl font-semibold mb-4">Horário de Atendimento</h4>
+					<p class="mb-2">Segunda a Sexta: 8h às 18h</p>
+					<p>Sábado: 8h às 12h</p>
+				</div>
+			</div>
+			<div class="mt-8 text-center">
+				<p>&copy; 2024 Abilaine Carlota - Nutricionista Materno-Infantil. Todos os direitos reservados.</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="assets/main.js"></script>
+</body>
+</html>
